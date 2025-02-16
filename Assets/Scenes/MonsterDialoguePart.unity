@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &157471313
 RectTransform:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 562, y: -53.34265}
+  m_AnchoredPosition: {x: 392.5, y: -53.34265}
   m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157471314
@@ -280,7 +280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &181005495
 RectTransform:
   m_ObjectHideFlags: 0
@@ -346,7 +346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &292739503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 392, y: -53.34265}
+  m_AnchoredPosition: {x: 392.5, y: -53.34265}
   m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &292739504
@@ -1708,7 +1708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1490044461
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1726,7 +1726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 562, y: -153.34265}
+  m_AnchoredPosition: {x: 477.5, y: -103.34265}
   m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490044462
@@ -1884,18 +1884,11 @@ MonoBehaviour:
   - {fileID: 157471314}
   - {fileID: 2102585467}
   - {fileID: 1490044462}
-  button_holder: {fileID: 181005494}
   next_button: {fileID: 570078278}
   dialogueText: {fileID: 413261805}
-  dialogues:
-  - Grr, I hope you have made some good food!
-  - _ask; die|No, i have made great food; live1| Yes!; die|I love you; live1| Yes,
-    i have made som food!
-  - _label; die
-  - AAAAAAA, I hate you. BYE BYE!
-  - _end
-  - _label; live1
-  - Yum yum, food good
+  monsterDialogue:
+  - {fileID: 11400000, guid: 77f37eeaa18a34b4aab47e8c2ea37fad, type: 2}
+  currentMonster: 0
 --- !u!1 &2064246678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,7 +2043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2102585466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2068,7 +2061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 392, y: -153.34265}
+  m_AnchoredPosition: {x: 392.5, y: -103.34265}
   m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102585467
