@@ -5,6 +5,7 @@ _ask; pen_shirt|No;pos_shirt|yes
 _label; pen_shirt
 _event;change_rep;float|-0,10
 Aww man
+_event; change_clothes
 *shuffling around*
 _jump to; con1
 

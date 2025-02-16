@@ -19,10 +19,19 @@ public class DialogueHandler : MonoBehaviour
 
     public int currentMonster = 0;
     
+    //Martin things
+    public GameObject cool_shirt;
+    public GameObject normal_shirt;
+    
+    public List<GameObject> martin_faces = new List<GameObject>();
+    
     private static IAsk currentAsk;
 
+    private float rep;
+    
     private void Start()
     {
+        rep = monsterDialogue[currentMonster].base_rep;
         dialogue = Dialogue.ReadFromFile(Application.dataPath + monsterDialogue[currentMonster].file_name);
         dialogueEventDispatcher.TextCallback.AddListener((dialogue1, text) => dialogueText.text = text.Text);
         dialogueEventDispatcher.LabelCallback.AddListener(SkipNode);
@@ -35,15 +44,20 @@ public class DialogueHandler : MonoBehaviour
         
         dialogueEventDispatcher.AddDynamicEventListener("change_rep", args =>
         {
-            if (!args.TryGet(0, out float rep)) return;
-            
-            Debug.Log(rep);
-            
+            if (!args.TryGet(0, out float rep_delta)) return;
+            rep += rep_delta;
+            var face_index = (int) Mathf.Lerp(0, martin_faces.Count, rep);
+            for (int i = 0; i < martin_faces.Count; i++)
+            {
+                martin_faces[i].SetActive(i == face_index);
+            }
         });
         
         dialogueEventDispatcher.AddDynamicEventListener("change_clothes", args =>
         {
-            if (!args.TryGet(0, out int change)) return;
+            cool_shirt.SetActive(false);
+            normal_shirt.SetActive(true);
+            
         });
         
         dialogueEventDispatcher.AskCallback.AddListener((dialogue1, ask) =>
