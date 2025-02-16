@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DialogueSystem;
 using TMPro;
 using UnityEngine;
@@ -32,7 +33,8 @@ public class DialogueHandler : MonoBehaviour
     private void Start()
     {
         rep = monsterDialogue[currentMonster].base_rep;
-        dialogue = Dialogue.ReadFromFile(Application.dataPath + monsterDialogue[currentMonster].file_name);
+        var textasset = Resources.Load<TextAsset>(monsterDialogue[currentMonster].file_name);
+        dialogue = new(textasset.text.Split('\n').ToList());
         dialogueEventDispatcher.TextCallback.AddListener((dialogue1, text) => dialogueText.text = text.Text);
         dialogueEventDispatcher.LabelCallback.AddListener(SkipNode);
         dialogueEventDispatcher.JumpByCallback.AddListener(SkipNode);

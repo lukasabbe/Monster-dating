@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e110a13a95e4f047a3105d7a6a006fa, type: 3}
   m_Name: Martin
   m_EditorClassIdentifier: 
-  file_name: /Monsters/Digs/martin.txt
+  file_name: Digs/martin
   monster_name: Martin
   base_rep: 0.5
-  art: {fileID: 0}
