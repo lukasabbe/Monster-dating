@@ -84,8 +84,12 @@ public class DialogueHandler : MonoBehaviour
 
         next_button.SetActive(true);
         
-        dialogue.Next(out var node);
-        dialogueEventDispatcher.TranslateAndDispatch(dialogue,node);
+        if(!dialogue.Next(out var node))
+        {
+            return;
+        }
+
+        dialogueEventDispatcher.TranslateAndDispatch(dialogue, node);
     }
 
     public void SkipNode(Dialogue dialogue, INode node)
