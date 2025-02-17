@@ -41,7 +41,7 @@ public class DialogueHandler : MonoBehaviour
         dialogueEventDispatcher.JumpToCallback.AddListener(SkipNode);
         dialogueEventDispatcher.DynamicEventCallback.AddListener(SkipNode);
         dialogueEventDispatcher.StartCallback.AddListener(SkipNode);
-        dialogueEventDispatcher.EndCallback.AddListener(SkipNode);
+        dialogueEventDispatcher.EndCallback.AddListener((dialogue2, text) => Application.Quit());
         dialogueEventDispatcher.ErrorCallback.AddListener(SkipNode);
         
         dialogueEventDispatcher.AddDynamicEventListener("change_rep", args =>
