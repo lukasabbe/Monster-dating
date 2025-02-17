@@ -156,6 +156,8 @@ MonoBehaviour:
   - {fileID: 1825087259}
   - {fileID: 1597678268}
   occupiedPlace: 
+  cookedFood: {r: 0.46226418, g: 0.29346192, b: 0.19406372, a: 0}
+  burnedFood: {r: 0.1981132, g: 0.12144968, b: 0.092515126, a: 0}
 --- !u!4 &12711520
 Transform:
   m_ObjectHideFlags: 0
@@ -411,6 +413,7 @@ GameObject:
   - component: {fileID: 722571200}
   - component: {fileID: 722571199}
   - component: {fileID: 722571198}
+  - component: {fileID: 722571201}
   m_Layer: 5
   m_Name: FoodType1
   m_TagString: Untagged
@@ -488,6 +491,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722571196}
   m_CullTransparentMesh: 1
+--- !u!114 &722571201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722571196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42eac32f5eb842d0bf2984045f362da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodName: 
+  cooked: 0
+  ovened: 0
+  burned: 0
+  mixed: 0
+  shopped: 0
 --- !u!1 &752699666
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +521,7 @@ GameObject:
   - component: {fileID: 752699670}
   - component: {fileID: 752699669}
   - component: {fileID: 752699668}
+  - component: {fileID: 752699671}
   m_Layer: 5
   m_Name: FoodType1 (2)
   m_TagString: Untagged
@@ -577,6 +599,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752699666}
   m_CullTransparentMesh: 1
+--- !u!114 &752699671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752699666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42eac32f5eb842d0bf2984045f362da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodName: 
+  cooked: 0
+  ovened: 0
+  burned: 0
+  mixed: 0
+  shopped: 0
 --- !u!1 &1178325706
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +831,7 @@ GameObject:
   - component: {fileID: 1510757669}
   - component: {fileID: 1510757668}
   - component: {fileID: 1510757667}
+  - component: {fileID: 1510757670}
   m_Layer: 5
   m_Name: FoodType1 (4)
   m_TagString: Untagged
@@ -868,6 +909,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510757665}
   m_CullTransparentMesh: 1
+--- !u!114 &1510757670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510757665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42eac32f5eb842d0bf2984045f362da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodName: 
+  cooked: 0
+  ovened: 0
+  burned: 0
+  mixed: 0
+  shopped: 0
 --- !u!1 &1597678267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1200,7 @@ GameObject:
   - component: {fileID: 1922315306}
   - component: {fileID: 1922315305}
   - component: {fileID: 1922315304}
+  - component: {fileID: 1922315307}
   m_Layer: 5
   m_Name: FoodType1 (6)
   m_TagString: Untagged
@@ -1218,6 +1278,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922315302}
   m_CullTransparentMesh: 1
+--- !u!114 &1922315307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922315302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42eac32f5eb842d0bf2984045f362da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodName: 
+  cooked: 0
+  ovened: 0
+  burned: 0
+  mixed: 0
+  shopped: 0
 --- !u!1 &1922794502
 GameObject:
   m_ObjectHideFlags: 0

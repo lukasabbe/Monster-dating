@@ -1,7 +1,7 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DialogueSystem
 {
@@ -10,6 +10,9 @@ namespace DialogueSystem
         public KitchenType currentKitchenType = KitchenType.none;
         public List<Transform> kitchenPoints;
         public List<bool> occupiedPlace = new List<bool>();
+
+        public Color cookedFood;
+        public Color burnedFood;
 
         private void Start()
         {
@@ -50,6 +53,28 @@ namespace DialogueSystem
                 case KitchenType.plate:
                     occupiedPlace[4] = occupied;
                     break;
+            }
+        }
+
+        public void ActiveStove(GameObject item)
+        {
+            StartCoroutine(_activeStove());
+            IEnumerator _activeStove()
+            {
+                yield return new WaitForSeconds(8f); // first stage
+                
+                if(!occupiedPlace[0]) yield break;
+                
+                item.GetComponent<Image>().color = cookedFood;
+                item.GetComponent<FoodItem>().cooked = true;
+                
+                yield return new WaitForSeconds(5f); // burnt
+                
+                if(!occupiedPlace[0]) yield break;
+                
+                item.GetComponent<Image>().color = burnedFood;
+                item.GetComponent<FoodItem>().burned = true;
+                
             }
         }
         
