@@ -48,7 +48,7 @@ public class DialogueHandler : MonoBehaviour
         {
             if (!args.TryGet(0, out float rep_delta)) return;
             rep += rep_delta;
-            var face_index = (int) Mathf.Lerp(0, martin_faces.Count, rep);
+            var face_index = (int) Mathf.Lerp(0, martin_faces.Count-1, rep);
             for (int i = 0; i < martin_faces.Count; i++)
             {
                 martin_faces[i].SetActive(i == face_index);

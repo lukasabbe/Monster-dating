@@ -78,6 +78,20 @@ namespace DialogueSystem
             }
         }
         
+        public void MixerSlush(GameObject item)
+        {
+            StartCoroutine(_activeStove());
+            IEnumerator _activeStove()
+            {
+                yield return new WaitForSeconds(3f); // first stage
+                
+                if(!occupiedPlace[3]) yield break;
+                
+                item.GetComponent<FoodItem>().mixed = true;
+                
+            }
+        }
+        
     }
 
     public class kitchenPlace
