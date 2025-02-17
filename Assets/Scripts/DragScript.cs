@@ -43,6 +43,12 @@ public class DragScript : MonoBehaviour, IDragHandler , IBeginDragHandler, IEndD
             default:
                 transform.position = currentKitchenPoint.position;
                 Handler.setKitchenOccupied(currentKitchenPoint.kitchenType, true);
+                switch (Handler.currentKitchenType)
+                {
+                    case KitchenType.oven:
+                        Handler.ActiveStove(gameObject);
+                        break;
+                }
                 break;
         }
     }
