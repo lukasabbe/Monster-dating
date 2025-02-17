@@ -167,7 +167,7 @@ TextureImporter:
         width: 128
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,7 +206,7 @@ TextureImporter:
       name: Martin_Neutral
       rect:
         serializedVersion: 2
-        x: 206
+        x: 254
         y: 445
         width: 36
         height: 54
@@ -228,7 +228,7 @@ TextureImporter:
       name: Martin_Glad
       rect:
         serializedVersion: 2
-        x: 254
+        x: 206
         y: 445
         width: 36
         height: 54
@@ -312,6 +312,138 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: "K\xF6k_Spis"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 256
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238c0861c1f7c1c478af9283aefd88a6
+      internalID: -1346983633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xF6k_B\xE4nk"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 79
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5d5b20d1e832146b0fc152576b1de3
+      internalID: -1753724085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xF6k_Sk\xE4rbr\xE4da"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 352
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0370f6daf248cc442b2cfdb441b71cc8
+      internalID: -1204253191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xF6k_Mixer_Botten"
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 352
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d003f0dde38d01744b55c45170b14334
+      internalID: -1274406636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xF6k_Mixer_Toppen"
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 352
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd00c809867c364f8244874c39cb04c
+      internalID: 1646190089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xF6k_Soptunna"
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 336
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3744375807a88a499b2c392d97881d4
+      internalID: -207153687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -326,13 +458,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "AllaJ\xE4vlaSprites_1": -680190282348564443
-      "AllaJ\xE4vlaSprites_2": 3021203617590167349
-      "AllaJ\xE4vlaSprites_3": 6688292007053649947
       "AllaJ\xE4vlaSprites_7": 7069714612999364744
       "AllaJ\xE4vlaSprites_8": 6317410460628310230
       Bakgrund_Bord: -4362937096213226625
       Bakgrund_Tavlor: 3128097100819023533
+      "K\xF6k_B\xE4nk": -680190282348564443
+      "K\xF6k_Mixer_Botten": 6688292007053649947
+      "K\xF6k_Mixer_Toppen": 1646190089
+      "K\xF6k_Sk\xE4rbr\xE4da": 3021203617590167349
+      "K\xF6k_Soptunna": -207153687
+      "K\xF6k_Spis": -1346983633
       Martin_Glad: -6524822426917092380
       Martin_Neutral: -8086234190488337094
       Martin_Sur: -8405173338878365577

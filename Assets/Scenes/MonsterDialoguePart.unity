@@ -1214,7 +1214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &554095934
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1860,7 +1860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1301049149
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2716,8 +2716,8 @@ MonoBehaviour:
   normal_shirt: {fileID: 1704892246}
   martin_faces:
   - {fileID: 1151059239}
-  - {fileID: 1301049148}
   - {fileID: 554095933}
+  - {fileID: 1301049148}
 --- !u!1 &2064246678
 GameObject:
   m_ObjectHideFlags: 0
