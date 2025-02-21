@@ -9,4 +9,5 @@ public class MonsterDialogue : ScriptableObject
     public string monster_name;
     public float base_rep;
     public List<FoodItemScriptableObj> req_food_items = new();
+    public List<string> food_comments = new();
 }

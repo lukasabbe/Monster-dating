@@ -18,3 +18,7 @@ MonoBehaviour:
   req_food_items:
   - {fileID: 11400000, guid: 1659079bebe44e34fbc9e24ed33b81a7, type: 2}
   - {fileID: 11400000, guid: 6fd8af418a3b99146a1bc2112a1886c8, type: 2}
+  food_comments:
+  - Wow, this is exactly what i wanted
+  - This is so bad, this is not what i wanted at all. I wanted lightly cooked mushroom
+    and chopped salad

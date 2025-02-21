@@ -28,8 +28,6 @@ public class DialogueHandler : MonoBehaviour
     private int shirtIndex = 1;
     
     public List<GameObject> martin_faces = new List<GameObject>();
-
-    public List<string> foodComments = new();
     
     private static IAsk currentAsk;
 
@@ -86,8 +84,17 @@ public class DialogueHandler : MonoBehaviour
             }
 
             if (monsterDialogue[currentMonster].req_food_items.Count > food_amount) success = false;
-            
-            
+
+            if (success)
+            {
+                dialogueText.text = monsterDialogue[currentMonster].food_comments[0];
+                rep += 0.7f;
+            }
+            else
+            {
+                dialogueText.text = monsterDialogue[currentMonster].food_comments[1];
+                rep -= 0.7f;
+            }
         });
         
         
