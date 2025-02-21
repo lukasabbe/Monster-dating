@@ -620,6 +620,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Mos
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7da3ec505d761e40bb4da0b03401cb3
+      internalID: 271633692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hackad
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 65
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d83c4d21ae89f74bbe25e594c60a75c
+      internalID: -1122552734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -634,12 +678,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      "AllaJ\xE4vlaSprites_0": 314643161
       "AllaJ\xE4vlaSprites_7": 7069714612999364744
       "AllaJ\xE4vlaSprites_8": 6317410460628310230
       Bakgrund: 2133983777
       Bakgrund_Bord: -4362937096213226625
       Bakgrund_Tavlor: 3128097100819023533
       "F\xF6rgrund": 1189362119
+      Hackad: -1122552734
       "K\xF6k_B\xE4nk": -680190282348564443
       "K\xF6k_Mixer_Botten": 6688292007053649947
       "K\xF6k_Mixer_Toppen": 1646190089
@@ -653,6 +699,7 @@ TextureImporter:
       "Martin_Tr\xF6ja_Cool": -3305436183238369396
       "Martin_Tr\xF6ja_Vanlig": -8307564244907994436
       "Matl\xE5da": 1881670117
+      Mos: 271633692
       Sallad: -1776881581
       Skruv: -1250308313
       Svamp: -1925815901
