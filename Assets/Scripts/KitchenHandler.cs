@@ -37,11 +37,11 @@ namespace DialogueSystem
 
             IEnumerator waitClock()
             {
-                timer.text = "Time left:\n" + timeToCook;
+                timer.text = $"{timeToCook}";
                 for (var i = 0; i < timeToCook; i++)
                 {
                     yield return new WaitForSeconds(1);
-                    timer.text = "Time left:\n" + (timeToCook - i);
+                    timer.text = $"{timeToCook - i}";
                 }
                 loadNextScene();
             }
