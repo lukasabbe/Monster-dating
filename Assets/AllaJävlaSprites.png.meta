@@ -81,7 +81,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 12
@@ -739,7 +739,7 @@ TextureImporter:
         width: 89
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -748,6 +748,28 @@ TextureImporter:
       bones: []
       spriteID: 293c3df108c911f48ba20c2247b62074
       internalID: -218299418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AllaJ\xE4vlaSprites_4"
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 68
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c078bfe604f0094439369374fc6b43a4
+      internalID: 64082684
       vertices: []
       indices: 
       edges: []
@@ -770,6 +792,7 @@ TextureImporter:
       "AllaJ\xE4vlaSprites_1": -583111375
       "AllaJ\xE4vlaSprites_2": -853366775
       "AllaJ\xE4vlaSprites_3": -218299418
+      "AllaJ\xE4vlaSprites_4": 64082684
       "AllaJ\xE4vlaSprites_7": 7069714612999364744
       "AllaJ\xE4vlaSprites_8": 6317410460628310230
       Bakgrund: 2133983777

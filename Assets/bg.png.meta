@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 5cf332783707c664dbae42717f7504f3
+guid: 89017e580b87cb24f811c7edbf95463a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6620530159067883011
-    second: Robotgrabben_0
-  - first:
-      213: 6927478969511619333
-    second: Robotgrabben_1
-  - first:
-      213: 3906278198483473810
-    second: Robotgrabben_2
+      213: -4364034832326165938
+    second: bg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 12
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,9 +72,9 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -132,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Robotgrabben_0
+      name: bg_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 399
-        width: 132
-        height: 85
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,52 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30660044a19d0eb50800000000000000
-      internalID: 6620530159067883011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Robotgrabben_1
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 399
-        width: 132
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50baabe5b69532060800000000000000
-      internalID: 6927478969511619333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Robotgrabben_2
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 399
-        width: 132
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 295d57e3353e53630800000000000000
-      internalID: 3906278198483473810
+      spriteID: e4a74cf0175df63c0800000000000000
+      internalID: -4364034832326165938
       vertices: []
       indices: 
       edges: []
@@ -211,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Robotgrabben_0: 6620530159067883011
-      Robotgrabben_1: 6927478969511619333
-      Robotgrabben_2: 3906278198483473810
+      bg_0: -4364034832326165938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
