@@ -475,7 +475,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -484,6 +484,138 @@ TextureImporter:
       bones: []
       spriteID: d8272657838e27540bc2798182bf9633
       internalID: 2133983777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Matl\xE5da"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 77
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7919b73d6003044b56f95c5616a119
+      internalID: 1881670117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xF6tt"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a72c21b9a42c8749a47f70e05fb5b9f
+      internalID: 1386609370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sallad
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a71706ca7585b747898dff8553ae144
+      internalID: -1776881581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Svamp
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fd15443260aa2418c4ec345469e7eb
+      internalID: -1925815901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skruv
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b309557190baec645808c76d893bfdba
+      internalID: -1250308313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tallrik
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 337
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0f6d25de5c728458ac24972e1bb8c1
+      internalID: -1079466278
       vertices: []
       indices: 
       edges: []
@@ -514,11 +646,17 @@ TextureImporter:
       "K\xF6k_Sk\xE4rbr\xE4da": 3021203617590167349
       "K\xF6k_Soptunna": -207153687
       "K\xF6k_Spis": -1346983633
+      "K\xF6tt": 1386609370
       Martin_Glad: -6524822426917092380
       Martin_Neutral: -8086234190488337094
       Martin_Sur: -8405173338878365577
       "Martin_Tr\xF6ja_Cool": -3305436183238369396
       "Martin_Tr\xF6ja_Vanlig": -8307564244907994436
+      "Matl\xE5da": 1881670117
+      Sallad: -1776881581
+      Skruv: -1250308313
+      Svamp: -1925815901
+      Tallrik: -1079466278
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
