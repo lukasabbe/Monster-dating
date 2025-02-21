@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 0038ae5e5f713714f975c3d28a933587
+guid: 5cf332783707c664dbae42717f7504f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7352339073622421304
-    second: Title_0
+      213: 6620530159067883011
+    second: Robotgrabben_0
   - first:
-      213: 578584420991164872
-    second: Title_1
+      213: 6927478969511619333
+    second: Robotgrabben_1
+  - first:
+      213: 3906278198483473810
+    second: Robotgrabben_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +78,9 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -129,35 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Title_0
+      name: Robotgrabben_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 72
-        width: 108
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c0d280219e37f990800000000000000
-      internalID: -7352339073622421304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Title_1
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 44
-        width: 27
-        height: 13
+        x: 14
+        y: 399
+        width: 132
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,30 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c1e0c5277b870800800000000000000
-      internalID: 578584420991164872
+      spriteID: 30660044a19d0eb50800000000000000
+      internalID: 6620530159067883011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Title_2
+      name: Robotgrabben_1
       rect:
         serializedVersion: 2
-        x: 50
-        y: 30
-        width: 27
-        height: 13
+        x: 158
+        y: 399
+        width: 132
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a40a5ac442388bb4792f8e5b0f312b45
-      internalID: 765295765
+      spriteID: 50baabe5b69532060800000000000000
+      internalID: 6927478969511619333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robotgrabben_2
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 399
+        width: 132
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295d57e3353e53630800000000000000
+      internalID: 3906278198483473810
       vertices: []
       indices: 
       edges: []
@@ -198,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -207,10 +210,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Title_0: -7352339073622421304
-      Title_1: 578584420991164872
-      Title_2: 765295765
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
