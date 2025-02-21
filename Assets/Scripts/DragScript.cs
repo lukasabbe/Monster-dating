@@ -2,13 +2,31 @@ using DialogueSystem;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DragScript : MonoBehaviour, IDragHandler , IBeginDragHandler, IEndDragHandler
 {
     public KitchenHandler Handler;
     private Vector3 startPosition;
     private kitchenPlace currentKitchenPoint;
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += scene_load;
+    }
     
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= scene_load;
+    }
+    
+    private void scene_load(Scene scene, LoadSceneMode mode)
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            GameObject.Find("DialogueHandler").GetComponent<DialogueHandler>().foodItems.Add(gameObject.GetComponent<FoodItem>());
+        }
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position;
