@@ -107,7 +107,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 512
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -673,7 +673,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -682,6 +682,72 @@ TextureImporter:
       bones: []
       spriteID: 87f4d751e52aaa040920df25b7db9fce
       internalID: 314643161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AllaJ\xE4vlaSprites_1"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 288
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78684c62ed706a148b9843c6418acfd7
+      internalID: -583111375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AllaJ\xE4vlaSprites_2"
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 258
+        width: 124
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d2b719004a3ca40a60548d89b52390
+      internalID: -853366775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AllaJ\xE4vlaSprites_3"
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 400
+        width: 89
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293c3df108c911f48ba20c2247b62074
+      internalID: -218299418
       vertices: []
       indices: 
       edges: []
@@ -701,6 +767,9 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       "AllaJ\xE4vlaSprites_0": 314643161
+      "AllaJ\xE4vlaSprites_1": -583111375
+      "AllaJ\xE4vlaSprites_2": -853366775
+      "AllaJ\xE4vlaSprites_3": -218299418
       "AllaJ\xE4vlaSprites_7": 7069714612999364744
       "AllaJ\xE4vlaSprites_8": 6317410460628310230
       Bakgrund: 2133983777
