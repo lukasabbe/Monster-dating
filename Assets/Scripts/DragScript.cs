@@ -25,13 +25,22 @@ public class DragScript : MonoBehaviour, IDragHandler , IBeginDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        GetComponent<Image>().raycastTarget = true;
         currentKitchenPoint = Handler.getCurrentKitchenPoint();
-        if (currentKitchenPoint.occupied)
+        if (currentKitchenPoint.occupied && currentKitchenPoint.kitchenType != KitchenType.plate)
         {
             transform.position = startPosition;
             return;
         }
+
+        if (currentKitchenPoint.kitchenType != KitchenType.plate)
+        {
+            GetComponent<Image>().raycastTarget = true;
+        }
+        else
+        {
+            Handler.DontUnload.Add(gameObject);
+        }
+        
         switch (currentKitchenPoint.kitchenType)
         {
             case KitchenType.none:
