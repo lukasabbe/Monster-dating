@@ -50,6 +50,9 @@ public class DragScript : MonoBehaviour, IDragHandler , IBeginDragHandler, IEndD
                     case KitchenType.mixer:
                         Handler.MixerSlush(gameObject);
                         break;
+                    case KitchenType.cutter:
+                        Handler.aCutter(gameObject);
+                        break;
                 }
                 Handler.setKitchenOccupied(currentKitchenPoint.kitchenType, true);
                 break;
