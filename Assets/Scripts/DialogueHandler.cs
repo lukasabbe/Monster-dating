@@ -19,6 +19,8 @@ public class DialogueHandler : MonoBehaviour
     public List<MonsterDialogue> monsterDialogue = new();
 
     public int currentMonster = 0;
+
+    public List<FoodItem> foodItems = new();
     
     //Martin things
     public GameObject cool_shirt;
