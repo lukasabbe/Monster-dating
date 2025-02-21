@@ -23,8 +23,9 @@ public class DialogueHandler : MonoBehaviour
     public List<FoodItem> foodItems = new();
     
     //Martin things
-    public GameObject cool_shirt;
-    public GameObject normal_shirt;
+    public List<GameObject> shirts = new(); 
+
+    private int shirtIndex = 1;
     
     public List<GameObject> martin_faces = new List<GameObject>();
     
@@ -59,10 +60,43 @@ public class DialogueHandler : MonoBehaviour
         
         dialogueEventDispatcher.AddDynamicEventListener("change_clothes", args =>
         {
-            cool_shirt.SetActive(false);
-            normal_shirt.SetActive(true);
-            
+            shirts.ForEach(s => s.SetActive(false));
+            shirts[shirtIndex].SetActive(true);
+            shirtIndex++;
+
         });
+        
+        dialogueEventDispatcher.AddDynamicEventListener("food_comment", args =>
+        {
+            var success = true;
+            var food_amount = 0;
+            foreach (var foodItem in foodItems)
+            {
+                foreach (var reqFoodItem in monsterDialogue[currentMonster].req_food_items)
+                {
+                    if (reqFoodItem.type != foodItem.type) continue;
+                    food_amount++;
+                    if(foodItem.burned != reqFoodItem.burned) success = false;
+                    if(foodItem.cooked != reqFoodItem.cooked) success = false;
+                    if(foodItem.mixed != reqFoodItem.mixed) success = false;
+                    if(foodItem.shopped != reqFoodItem.shopped) success = false;
+                }
+            }
+
+            if (monsterDialogue[currentMonster].req_food_items.Count > food_amount) success = false;
+
+            if (success)
+            {
+                dialogueText.text = monsterDialogue[currentMonster].food_comments[0];
+                rep += 0.7f;
+            }
+            else
+            {
+                dialogueText.text = monsterDialogue[currentMonster].food_comments[1];
+                rep -= 0.7f;
+            }
+        });
+        
         
         dialogueEventDispatcher.AskCallback.AddListener((dialogue1, ask) =>
         {

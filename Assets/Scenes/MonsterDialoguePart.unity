@@ -2886,12 +2886,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 77f37eeaa18a34b4aab47e8c2ea37fad, type: 2}
   currentMonster: 0
   foodItems: []
-  cool_shirt: {fileID: 15947845}
-  normal_shirt: {fileID: 1704892246}
+  shirts:
+  - {fileID: 15947845}
+  - {fileID: 1704892246}
+  - {fileID: 149352306}
   martin_faces:
   - {fileID: 1151059239}
   - {fileID: 554095933}
   - {fileID: 1301049148}
+  foodComments: []
 --- !u!1 &1949767104
 GameObject:
   m_ObjectHideFlags: 0

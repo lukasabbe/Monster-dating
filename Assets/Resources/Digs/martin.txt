@@ -1,4 +1,8 @@
 Hello, my name is Martin!
+
+Nice to meat you. I hope you have made some good food for us,
+I am starving, but first I need to ask you something.
+
 Do you like my shirt?
 _ask; pen_shirt|No;pos_shirt|yes 
 
@@ -7,6 +11,32 @@ _event;change_rep;float|-0,10
 Aww man
 _event; change_clothes
 *shuffling around*
+
+Do you like it now?
+_ask; pen_shirt2|No;pos_shirt2|yes
+
+_label; pen_shirt2
+_event;change_rep;float|-0,05
+Okay, umm.
+_event; change_clothes
+*shuffling around*
+
+Do you like how I look now?
+_ask; pen_shirt3|No;pos_shirt3|yes
+
+_label; pen_shirt3
+Okay bye, you are just rude!
+_end
+
+_label; pos_shirt3
+_event;change_rep;float|0,05
+Ooh you are that type of person
+_jump to; con1
+
+_label; pos_shirt2
+_event;change_rep;float|0,05
+I am happy you like it!
+You always need to bring one backup shirt.
 _jump to; con1
 
 _label; pos_shirt
@@ -37,6 +67,7 @@ That's fantastic
 
 _label;eating
 Okay let's try this
+_event; food_comment
 
 Oh, you don't think the broken horn is of putting?
 _ask; pen_horn|I did notice, you look a bit wack without it; half_horn| I did notice, what happened?; pos_horn|No I don't! It doesn't bother me
