@@ -22,3 +22,10 @@ MonoBehaviour:
   - Wow, this is exactly what i wanted
   - This is so bad, this is not what i wanted at all. I wanted lightly cooked mushroom
     and chopped salad
+  end_succes_values:
+  - 1.8
+  - 0.5
+  end_comments:
+  - 'Wow, this date was so good. I hope we can meet again '
+  - I don't know what to think about this date. I was good i think
+  - This was a bad date, let's never meet again
