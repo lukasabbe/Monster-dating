@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace DialogueSystem
 {
@@ -13,14 +15,52 @@ namespace DialogueSystem
 
         public Color cookedFood;
         public Color burnedFood;
+        public Sprite MixedShit;
+        public Sprite CuttShit;
 
         public Color warning;
 
         public Image ProgBarStove;
+        public Image ProgBarCutter;
+        public Image ProgBarMixer;
+
+        public TMP_Text timer;
+
+        public int timeToCook = 25;
+        
+        public List<GameObject> DontUnload = new List<GameObject>();
         
         private void Start()
         {
             for(var i = 0; i < kitchenPoints.Count; i++) occupiedPlace.Add(false);
+            StartCoroutine(waitClock());
+
+            IEnumerator waitClock()
+            {
+                timer.text = "Time left:\n" + timeToCook;
+                for (var i = 0; i < timeToCook; i++)
+                {
+                    yield return new WaitForSeconds(1);
+                    timer.text = "Time left:\n" + (timeToCook - i);
+                }
+                loadNextScene();
+            }
+        }
+        
+        public void loadNextScene()
+        {
+            StartCoroutine(fade());
+
+            IEnumerator fade()
+            {
+                yield return new WaitForSeconds(1f);
+                foreach (var g in DontUnload)
+                {
+                    g.transform.SetParent(null);
+                    DontDestroyOnLoad(g);
+                }
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   
+            }
         }
 
         public kitchenPlace getCurrentKitchenPoint()
@@ -97,6 +137,8 @@ namespace DialogueSystem
                     yield break;
                 }
                 
+                ProgBarMixer.fillAmount = 1;
+                
                 item.GetComponent<Image>().color = burnedFood;
                 item.GetComponent<FoodItem>().burned = true;
                 ProgBarStove.fillAmount = 0;
@@ -109,9 +151,27 @@ namespace DialogueSystem
             StartCoroutine(_activeStove());
             IEnumerator _activeStove()
             {
-                yield return new WaitForSeconds(3f); // first stage
+                var savedSprite = item.GetComponent<Image>().sprite;
+                item.GetComponent<Image>().sprite = MixedShit;
+                for (var i = 0; i < 4; i++)
+                {
+                    yield return new WaitForSeconds(1);
+                    ProgBarMixer.fillAmount = Mathf.Lerp(0, 1, i/4f);
+                    
+                    if (occupiedPlace[2]) continue;
+                    ProgBarMixer.fillAmount = 0;
+                    item.GetComponent<Image>().sprite = savedSprite;
+                    yield break;
+                }
                 
-                if(!occupiedPlace[2]) yield break;
+                if (!occupiedPlace[2])
+                {
+                    item.GetComponent<Image>().sprite = savedSprite;
+                    ProgBarStove.fillAmount = 0;
+                    yield break;
+                }
+
+                ProgBarMixer.fillAmount = 0;
 
                 item.GetComponent<FoodItem>().mixed = true;
             }
@@ -122,9 +182,25 @@ namespace DialogueSystem
             StartCoroutine(_aCutter());
             IEnumerator _aCutter()
             {
-                yield return new WaitForSeconds(3f); // first stage
+                for (var i = 0; i < 4; i++)
+                {
+                    yield return new WaitForSeconds(1);
+                    ProgBarCutter.fillAmount = Mathf.Lerp(0, 1, i/4f);
+                    
+                    if (occupiedPlace[1]) continue;
+                    ProgBarCutter.fillAmount = 0;
+                    yield break;
+                }
                 
-                if(!occupiedPlace[1]) yield break;
+                if (!occupiedPlace[1])
+                {
+                    ProgBarCutter.fillAmount = 0;
+                    yield break;
+                }
+                
+                item.GetComponent<Image>().sprite = CuttShit;
+
+                ProgBarCutter.fillAmount = 0;
 
                 item.GetComponent<FoodItem>().shopped = true;
             }
