@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   file_name: Digs/martin
   monster_name: Martin
-  base_rep: 0.5
+  base_rep: 1
+  req_food_items:
+  - {fileID: 11400000, guid: 1659079bebe44e34fbc9e24ed33b81a7, type: 2}
+  - {fileID: 11400000, guid: 6fd8af418a3b99146a1bc2112a1886c8, type: 2}
