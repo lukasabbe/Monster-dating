@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using System.IO;
 using System;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 
@@ -173,15 +173,15 @@ namespace DialogueSystem
                     }
                     else
                     {
-                        Debug.LogWarning($"Could not find label definition for label reference \"{jumpTo.Label}\"");
+                        Debug.Log($"Could not find label definition for label reference \"{jumpTo.Label}\"");
                     }
                 }
 
                 var unpatchedLabels = labels.Except(patchedLabels);
 
-                foreach(var label in unpatchedLabels)
+                foreach (var label in unpatchedLabels)
                 {
-                    Debug.LogWarning($"Label \"{label.Label}\" is unreachable");
+                    Debug.Log($"Label \"{label.Label}\" is unreachable");
                 }
             }
         }
@@ -204,7 +204,7 @@ namespace DialogueSystem
                 builder.EmitEndNode();
                 builder.EmitStartNode();
 
-                for(int lineNumber = 0; lineNumber < lines.Count; lineNumber++)
+                for (int lineNumber = 0; lineNumber < lines.Count; lineNumber++)
                 {
                     string line = lines[lineNumber].Trim();
 
@@ -226,7 +226,7 @@ namespace DialogueSystem
                         }
                         else
                         {
-                            Debug.LogWarning($"Node \"{node}\" is not valid");
+                            Debug.Log($"Node \"{node}\" is not valid");
                         }
                     }
                     else
@@ -234,6 +234,8 @@ namespace DialogueSystem
                         builder.EmitTextNode(line);
                     }
                 }
+
+                builder.EmitEndNode();
 
                 builder.Patch();
 
@@ -260,7 +262,7 @@ namespace DialogueSystem
                 }
                 else
                 {
-                    Debug.LogWarning($"Failed while parsing int. Expected whole number, got \"{args[index]}\"");
+                    Debug.Log($"Failed while parsing int. Expected whole number, got \"{args[index]}\"");
                     return false;
                 }
             }
@@ -280,7 +282,7 @@ namespace DialogueSystem
                 }
                 else
                 {
-                    Debug.LogWarning($"Failed while parsing int. Expected whole number, got \"{s}\"");
+                    Debug.Log($"Failed while parsing int. Expected whole number, got \"{s}\"");
                     return false;
                 }
             }
@@ -300,7 +302,7 @@ namespace DialogueSystem
                 }
                 else
                 {
-                    Debug.LogWarning($"Failed while parsing float. Expected int, got \"{args[index]}\"");
+                    Debug.Log($"Failed while parsing float. Expected int, got \"{args[index]}\"");
                     return false;
                 }
             }
@@ -320,7 +322,7 @@ namespace DialogueSystem
                 }
                 else
                 {
-                    Debug.LogWarning($"Failed while parsing float. Expected float, got \"{s}\"");
+                    Debug.Log($"Failed while parsing float. Expected float, got \"{s}\"");
                     return false;
                 }
             }
@@ -392,7 +394,7 @@ namespace DialogueSystem
             {
                 if (!TryParseString(args, 0, out var alias))
                 {
-                    dialogueBuilder.EmitErrorNode(FormatError("label", line, lineNumber, "Invalid arguments."));             
+                    dialogueBuilder.EmitErrorNode(FormatError("label", line, lineNumber, "Invalid arguments."));
                     return;
                 }
 
@@ -403,7 +405,7 @@ namespace DialogueSystem
             {
                 if (!TryParseInt(args, 0, out var offset))
                 {
-                    dialogueBuilder.EmitErrorNode(FormatError("jump by", line, lineNumber, "Invalid arguments."));                 
+                    dialogueBuilder.EmitErrorNode(FormatError("jump by", line, lineNumber, "Invalid arguments."));
                     return;
                 }
 
@@ -425,7 +427,7 @@ namespace DialogueSystem
             {
                 if (!TryParseString(args, 0, out var name))
                 {
-                    dialogueBuilder.EmitErrorNode(FormatError("dynamic event", line, lineNumber, "Invalid arguments."));   
+                    dialogueBuilder.EmitErrorNode(FormatError("dynamic event", line, lineNumber, "Invalid arguments."));
                     return;
                 }
 
@@ -433,7 +435,7 @@ namespace DialogueSystem
 
                 var eventArgs = new object[eventArgsAsString.Length];
 
-                for(int i = 0; i < eventArgsAsString.Length; i++)
+                for (int i = 0; i < eventArgsAsString.Length; i++)
                 {
                     if (!TryParseKeyValuePair(eventArgsAsString, i, out var eventArgType, out var eventArgValueAsString, line, lineNumber))
                     {
@@ -441,7 +443,7 @@ namespace DialogueSystem
                         return;
                     }
 
-                    switch(eventArgType)
+                    switch (eventArgType)
                     {
                         case "int":
                             {
@@ -463,7 +465,7 @@ namespace DialogueSystem
                             eventArgs[i] = eventArgValueAsString;
                             break;
                         default:
-                            Debug.LogWarning($"Unknown type \"{eventArgType}\"");
+                            Debug.Log($"Unknown type \"{eventArgType}\"");
                             break;
                     }
                 }
@@ -478,13 +480,13 @@ namespace DialogueSystem
 
             static void ParseStartNode(DialogueBuilder dialogueBuilder, string[] args, string line, int lineNumber)
             {
-                dialogueBuilder.EmitEndNode();
+                dialogueBuilder.EmitStartNode();
             }
 
             static string FormatError(string node, string line, int lineNumber, string error)
             {
                 string formattedError = $"Failed while parsing {node} \"{line}\" on line {lineNumber}. {error}";
-                Debug.LogWarning(formattedError);
+                Debug.Log(formattedError);
                 return formattedError;
             }
         }
@@ -886,7 +888,7 @@ namespace DialogueSystem
             }
             else
             {
-                Debug.LogWarning($"Error while unpacking argument {index}: Expected arg of type {expectedType}, got {m_ArgTypeArray[index]}.");
+                Debug.Log($"Error while unpacking argument {index}: Expected arg of type {expectedType}, got {m_ArgTypeArray[index]}.");
                 return false;
             }
         }
