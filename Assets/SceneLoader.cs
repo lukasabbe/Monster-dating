@@ -32,10 +32,20 @@ public class SceneLoader : MonoBehaviour
             SceneManager.LoadScene(index);
         }
     }
-
+    
     public void setMonster(int monsterID)
     {
         GamerManager.setCurrentMonster(monsterID);
+    }
+
+    public void LoadNextScene()
+    {
+        StartCoroutine(FadeOutThenLoadScene());
+        IEnumerator FadeOutThenLoadScene()
+        {
+            yield return FadeOut();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     Coroutine FadeIn()
