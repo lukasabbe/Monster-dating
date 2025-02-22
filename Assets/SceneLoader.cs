@@ -32,6 +32,16 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
+    public void LoadNextScene()
+    {
+        StartCoroutine(FadeOutThenLoadScene());
+        IEnumerator FadeOutThenLoadScene()
+        {
+            yield return FadeOut();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
     Coroutine FadeIn()
     {
         return StartCoroutine(FadeIn());
