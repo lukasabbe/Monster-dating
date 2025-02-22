@@ -37,6 +37,8 @@ public class SceneLoader : MonoBehaviour
         return StartCoroutine(FadeIn());
         IEnumerator FadeIn()
         {
+            image.gameObject.SetActive(true);
+
             for (float t = 1.0f; t > 0.0f; t -= Time.deltaTime)
             {
                 var color = image.color;
