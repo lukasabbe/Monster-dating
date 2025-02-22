@@ -149,8 +149,8 @@ public class DialogueHandler : MonoBehaviour
         foreach (var t in buttons) t.gameObject.SetActive(false);
 
         next_button.SetActive(true);
-        
-        dialogue.Next(out var node)
+
+        dialogue.Next(out var node);
 
 
         dialogueEventDispatcher.TranslateAndDispatch(dialogue, node);
