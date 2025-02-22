@@ -109,6 +109,7 @@ public class DialogueHandler : MonoBehaviour
             {
                 dialogueText.text = monsterDialogue[currentMonster].end_comments[0];
                 GamerManager.completedMonsters[currentMonster] = true;
+                GamerManager.SaveGame();
             }
             else if (rep < monsterDialogue[currentMonster].end_succes_values[1])
             {
