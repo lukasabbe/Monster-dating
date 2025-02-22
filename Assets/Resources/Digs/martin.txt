@@ -8,7 +8,7 @@ _ask; pen_shirt|No;pos_shirt|yes
 
 _label; pen_shirt
 _event;change_rep;float|-0,10
-Aww man
+Aww...
 _event; change_clothes
 *shuffling around*
 
@@ -21,12 +21,14 @@ Okay, umm.
 _event; change_clothes
 *shuffling around*
 
-Do you like how I look now?
+Do you like it now?
 _ask; pen_shirt3|No;pos_shirt3|yes
 
 _label; pen_shirt3
-Okay bye, you are just rude!
-_end
+Okay, that's very rude!
+You clearly don't want to date me!
+I am leaving
+_end;
 
 _label; pos_shirt3
 _event;change_rep;float|0,05
@@ -49,28 +51,30 @@ I hope it's something I like!
 _ask; pen_food|No lol; pos_food|Yes I have it here
 
 _label; pen_food
-_event;change_rep;float|-0,05
-okay you kidding right?
+_event;change_rep;float|-0,10
+Okay you kidding right?
 _ask; pen_food2|No, I forgot it lol; pos_food2|Yes, I am just a troll
 
 _label; pen_food2
-Okay I am leaving if you forgot the food!
-_end
+Okay, you had a lot of time to prep for this date.
+I am leaving!
+_end;
 
 _label; pos_food2
-Okay that's just weird to troll like that!
+Okay that's just weird to joke about that
 _jump to; eating
 
 _label; pos_food
 _event;change_rep;float|0,15
-That's fantastic
+Nice
 
 _label;eating
-Okay let's try this
+Let's eat! 
 _event; food_comment
-line skip
+..line skip..
 
-Oh, you don't think the broken horn is of putting?
+Can I ask you something, it's about my appearance
+You don't think the broken horn is off-putting?
 _ask; pen_horn|I did notice, you look a bit wack without it; half_horn| I did notice, what happened?; pos_horn|No I don't! It doesn't bother me
 
 _label; pen_horn
@@ -82,15 +86,16 @@ _ask; pen_app|No; half_app|Yes, I like your defined eyebrows!; pos_app|Yes I lik
 _label; pen_app
 Okay bye, I am leaving!
 You are the rudest person I have met in a long time!
-_end
+_end;
 
 _label; half_app
+_event;change_rep;float|0,1
 Oh, thank you, I never thought about them!
 _jump to; move_on
 
 _label; pos_app
-_event;change_rep;float|0,45
-Thank you, I work on it a lot!
+_event;change_rep;float|0,35
+Thank you, I trim it every day!
 _jump to; move_on
 
 _label; half_horn
@@ -98,11 +103,10 @@ Oh, I really don't want to talk about it.
 But you have been nice to me, so why not
 Its very embarrassing 
 I had hair once,
-and we demons use real combs that are made out of metal.
+and we demons use combs that are made out of metal.
 I was not very careful once and fell over in my bathroom, 
 and the comb went up in the air and gained insane speed
-and fell right on my right horn when I was on the floor,
-and it went right off!
+and landed right on my horn, and it went off!
 So now you know.
  
 _jump to; move_on
@@ -112,3 +116,5 @@ _event;change_rep;float|0,60
 Oh, that's good! Thank you!
 
 _label; move_on
+
+_event; end_rep

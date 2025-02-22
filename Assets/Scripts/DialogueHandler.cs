@@ -1,10 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using DialogueSystem;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueHandler : MonoBehaviour
 {
@@ -44,7 +44,21 @@ public class DialogueHandler : MonoBehaviour
         dialogueEventDispatcher.JumpToCallback.AddListener(SkipNode);
         dialogueEventDispatcher.DynamicEventCallback.AddListener(SkipNode);
         dialogueEventDispatcher.StartCallback.AddListener(SkipNode);
-        dialogueEventDispatcher.EndCallback.AddListener((dialogue2, text) => Application.Quit());
+        dialogueEventDispatcher.EndCallback.AddListener(SkipNode);
+
+        dialogueEventDispatcher.TextCallback.AddListener(debugNode);
+        dialogueEventDispatcher.LabelCallback.AddListener(debugNode);
+        dialogueEventDispatcher.JumpByCallback.AddListener(debugNode);
+        dialogueEventDispatcher.JumpToCallback.AddListener(debugNode);
+        dialogueEventDispatcher.DynamicEventCallback.AddListener(debugNode);
+        dialogueEventDispatcher.StartCallback.AddListener(debugNode);
+        dialogueEventDispatcher.EndCallback.AddListener(debugNode);
+        
+        dialogueEventDispatcher.EndCallback.AddListener((dialogue2, text) =>
+        {
+            Debug.Log("Dialogue End");
+            SceneManager.LoadScene(0);
+        });
         dialogueEventDispatcher.ErrorCallback.AddListener(SkipNode);
         
         dialogueEventDispatcher.AddDynamicEventListener("change_rep", args =>
@@ -96,6 +110,22 @@ public class DialogueHandler : MonoBehaviour
                 rep -= 0.7f;
             }
         });
+
+        dialogueEventDispatcher.AddDynamicEventListener("end_rep", args =>
+        {
+            if (rep >= monsterDialogue[currentMonster].end_succes_values[0])
+            {
+                dialogueText.text = monsterDialogue[currentMonster].end_comments[0];
+            }
+            else if (rep < monsterDialogue[currentMonster].end_succes_values[1])
+            {
+                dialogueText.text = monsterDialogue[currentMonster].end_comments[2];
+            }
+            else
+            {
+                dialogueText.text = monsterDialogue[currentMonster].end_comments[1];
+            }
+        });
         
         
         dialogueEventDispatcher.AskCallback.AddListener((dialogue1, ask) =>
@@ -131,6 +161,11 @@ public class DialogueHandler : MonoBehaviour
     public void SkipNode(Dialogue dialogue, INode node)
     {
         ProgresEvent();
+    }
+
+    public void debugNode(Dialogue dialogue, INode node)
+    {
+        Debug.Log(node);
     }
     
     public void setDigIndex(int index)
