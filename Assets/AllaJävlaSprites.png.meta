@@ -818,6 +818,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: "Hj\xE4rta Icon"
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 89
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137e25104d477da44ba5335263e5ef69
+      internalID: 7069714612999364744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -839,13 +861,13 @@ TextureImporter:
       "AllaJ\xE4vlaSprites_4": 64082684
       "AllaJ\xE4vlaSprites_5": 2073213887
       "AllaJ\xE4vlaSprites_6": 1713339095
-      "AllaJ\xE4vlaSprites_7": 7069714612999364744
       "AllaJ\xE4vlaSprites_8": 6317410460628310230
       Bakgrund: 2133983777
       Bakgrund_Bord: -4362937096213226625
       Bakgrund_Tavlor: 3128097100819023533
       "F\xF6rgrund": 1189362119
       Hackad: -1122552734
+      "Hj\xE4rta Icon": 7069714612999364744
       "K\xF6k_B\xE4nk": -680190282348564443
       "K\xF6k_Mixer_Botten": 6688292007053649947
       "K\xF6k_Mixer_Toppen": 1646190089

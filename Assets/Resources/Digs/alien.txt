@@ -1,0 +1,40 @@
+Dowloading pack "How to interact with humans" by Glorpus...
+*Beep*
+Greetings human, how are you?
+
+_ask; greeting_is_ok|Im ok; greeting_is_not_ok|I've been feeling a bit down lately
+
+_label;greeting_is_not_ok
+Dowloading pack "Understanding human feeling Vol.2" by Glorpus...
+*Beep*
+*Boop*
+It seems my galactic service provider is experiencing issues
+*Beep*
+It is downloaded
+I dont understand
+_event;change_rep;float;-0,1
+
+_label;greeting_is_ok
+I dont care
+Did you cook the human food as I requested?
+
+_ask;cooked_did_my_best|I did my best!;cooked_youre_gonna_love_it|You're gonna LOVE IT!;cooked_no|No
+
+_label;cooked_did_my_best
+That pleases me
+But it is also expected
+_event;change_rep;float|0.2
+_jump to;eat
+
+_label;cooked_youre_gonna_love_it
+Your attempt at mind control is weak
+You are weak
+_event;change_rep;float|-0.1
+_jump to;eat
+
+_label;eat
+Let us feast
+Mmmh, nutrition
+Delicious
+Im posting this on Zorpbook
+#HowDidTheyMakeItTo2025
