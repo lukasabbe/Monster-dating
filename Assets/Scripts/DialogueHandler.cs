@@ -150,10 +150,8 @@ public class DialogueHandler : MonoBehaviour
 
         next_button.SetActive(true);
         
-        if(!dialogue.Next(out var node))
-        {
-            return;
-        }
+        dialogue.Next(out var node)
+
 
         dialogueEventDispatcher.TranslateAndDispatch(dialogue, node);
     }
