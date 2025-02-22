@@ -63,7 +63,7 @@ namespace DialogueSystem
                     g.transform.SetParent(null);
                     DontDestroyOnLoad(g);
                 }
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   
+                SceneManager.LoadScene(GamerManager.getMonsterScean(GamerManager.currentMonster));   
             }
         }
 

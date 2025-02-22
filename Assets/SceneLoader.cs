@@ -25,11 +25,17 @@ public class SceneLoader : MonoBehaviour
     public void LoadScene(int index)
     {
         StartCoroutine(FadeOutThenLoadScene());
+        
         IEnumerator FadeOutThenLoadScene()
         {
             yield return FadeOut();
             SceneManager.LoadScene(index);
         }
+    }
+    
+    public void setMonster(int monsterID)
+    {
+        GamerManager.setCurrentMonster(monsterID);
     }
 
     public void LoadNextScene()
