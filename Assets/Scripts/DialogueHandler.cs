@@ -45,14 +45,6 @@ public class DialogueHandler : MonoBehaviour
         dialogueEventDispatcher.DynamicEventCallback.AddListener(SkipNode);
         dialogueEventDispatcher.StartCallback.AddListener(SkipNode);
         dialogueEventDispatcher.EndCallback.AddListener(SkipNode);
-
-        dialogueEventDispatcher.TextCallback.AddListener(debugNode);
-        dialogueEventDispatcher.LabelCallback.AddListener(debugNode);
-        dialogueEventDispatcher.JumpByCallback.AddListener(debugNode);
-        dialogueEventDispatcher.JumpToCallback.AddListener(debugNode);
-        dialogueEventDispatcher.DynamicEventCallback.AddListener(debugNode);
-        dialogueEventDispatcher.StartCallback.AddListener(debugNode);
-        dialogueEventDispatcher.EndCallback.AddListener(debugNode);
         
         dialogueEventDispatcher.EndCallback.AddListener((dialogue2, text) =>
         {
@@ -149,11 +141,9 @@ public class DialogueHandler : MonoBehaviour
         foreach (var t in buttons) t.gameObject.SetActive(false);
 
         next_button.SetActive(true);
-        
-        if(!dialogue.Next(out var node))
-        {
-            return;
-        }
+
+        dialogue.Next(out var node);
+
 
         dialogueEventDispatcher.TranslateAndDispatch(dialogue, node);
     }
