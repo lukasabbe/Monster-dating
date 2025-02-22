@@ -21,7 +21,7 @@ public class DragScript : MonoBehaviour, IDragHandler , IBeginDragHandler, IEndD
     
     private void scene_load(Scene scene, LoadSceneMode mode)
     {
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == GamerManager.getMonsterScean(GamerManager.currentMonster))
         {
             GameObject.Find("DialogueHandler").GetComponent<DialogueHandler>().foodItems.Add(gameObject.GetComponent<FoodItem>());
         }

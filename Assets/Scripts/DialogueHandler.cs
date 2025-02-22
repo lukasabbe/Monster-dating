@@ -108,6 +108,7 @@ public class DialogueHandler : MonoBehaviour
             if (rep >= monsterDialogue[currentMonster].end_succes_values[0])
             {
                 dialogueText.text = monsterDialogue[currentMonster].end_comments[0];
+                GamerManager.completedMonsters[currentMonster] = true;
             }
             else if (rep < monsterDialogue[currentMonster].end_succes_values[1])
             {
