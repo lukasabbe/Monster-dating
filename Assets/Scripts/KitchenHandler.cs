@@ -29,6 +29,10 @@ namespace DialogueSystem
         public int timeToCook = 25;
         
         public List<GameObject> DontUnload = new List<GameObject>();
+
+        public AudioClip mixerSound;
+        public AudioClip cutterSound;
+        public AudioClip stoveSound;
         
         private void Start()
         {
@@ -101,6 +105,8 @@ namespace DialogueSystem
             StartCoroutine(_activeStove());
             IEnumerator _activeStove()
             {
+                var audio = GetComponent<AudioSource>();
+                audio.PlayOneShot(stoveSound);
                 for (var i = 0; i < 8; i++)
                 {
                     yield return new WaitForSeconds(1);
@@ -153,6 +159,10 @@ namespace DialogueSystem
             {
                 var savedSprite = item.GetComponent<Image>().sprite;
                 item.GetComponent<Image>().sprite = MixedShit;
+                
+                GetComponent<AudioSource>().PlayOneShot(mixerSound);
+                
+                
                 for (var i = 0; i < 4; i++)
                 {
                     yield return new WaitForSeconds(1);
@@ -182,6 +192,8 @@ namespace DialogueSystem
             StartCoroutine(_aCutter());
             IEnumerator _aCutter()
             {
+                var audio = GetComponent<AudioSource>();
+                audio.PlayOneShot(cutterSound);
                 for (var i = 0; i < 4; i++)
                 {
                     yield return new WaitForSeconds(1);
