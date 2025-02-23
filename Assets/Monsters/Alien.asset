@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   file_name: Digs/Alien
   monster_name: Alien
-  base_rep: 0.3
+  base_rep: 1
   req_food_items: []
   food_comments: []
   end_succes_values:
-  - 1.5
+  - 1.7
   - 1
   end_comments:
-  - Intelligent, til' we meet again
+  - Intelligent, maybe humans arent so bad after all
   - Tolerable
-  - Aiming neutron cannon at current coordinates!
+  - The reason humans rank so low on the Galactic Index

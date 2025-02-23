@@ -24,8 +24,10 @@ public class DialogueHandler : MonoBehaviour
     public int currentMonster = 0;
 
     public List<FoodItem> foodItems = new();
-    
+
     //Martin things
+    public MartinAnimator martinAnimator;
+
     public List<GameObject> shirts = new(); 
 
     private int shirtIndex = 1;
@@ -78,10 +80,12 @@ public class DialogueHandler : MonoBehaviour
         
         dialogueEventDispatcher.AddDynamicEventListener("change_clothes", args =>
         {
-            shirts.ForEach(s => s.SetActive(false));
-            shirts[shirtIndex].SetActive(true);
-            shirtIndex++;
-
+            martinAnimator.DuckUnderTable(() =>
+            {
+                shirts.ForEach(s => s.SetActive(false));
+                shirts[shirtIndex].SetActive(true);
+                shirtIndex++;
+            });
         });
         
         dialogueEventDispatcher.AddDynamicEventListener("food_comment", args =>

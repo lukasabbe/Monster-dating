@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AlienDialogue.unity
     guid: 0ecc08bf7479f264fa1c260cc6f37b6a
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 10c48da63f02d9c4a90f0cdff643c620
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
