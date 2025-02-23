@@ -46,6 +46,7 @@ public class GamerManager : MonoBehaviour
     public static void LoadGame()
     {
         var save_path = Application.persistentDataPath + "/monsters_dating.dat";
+        if(!File.Exists(save_path)) return;  
         var bytes = File.ReadAllBytes(save_path);
         var buffer = new Buffer(bytes);
         buffer.Read(out bool temp1);
@@ -54,5 +55,13 @@ public class GamerManager : MonoBehaviour
         completedMonsters[1] = temp2;
         buffer.Read(out bool temp3);
         completedMonsters[2] = temp3;
+    }
+
+    public void removeData()
+    {
+        var save_path = Application.persistentDataPath + "/monsters_dating.dat";
+        if(!File.Exists(save_path)) return;
+        File.Delete(save_path);
+        for (var i = 0; i < 3; i++) completedMonsters[i] = false;
     }
 }
