@@ -126,6 +126,11 @@ public class DialogueHandler : MonoBehaviour
                 dialogueText.text = monsterDialogue[currentMonster].food_comments[1];
                 rep -= 0.7f;
             }
+
+            foreach (var foodItem in foodItems)
+            {
+                Destroy(foodItem.gameObject);
+            }
         });
 
         dialogueEventDispatcher.AddDynamicEventListener("end_rep", args =>
@@ -144,6 +149,7 @@ public class DialogueHandler : MonoBehaviour
             {
                 dialogueText.text = monsterDialogue[currentMonster].end_comments[1];
             }
+            
         });
 
         dialogueEventDispatcher.AddDynamicEventListener("zeeeb_play_snippet", args =>
