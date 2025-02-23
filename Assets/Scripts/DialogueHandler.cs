@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using DialogueSystem;
 using TMPro;
@@ -33,6 +34,11 @@ public class DialogueHandler : MonoBehaviour
 
     //Zeeb stuff
     public AudioClip zeeebSnippet;
+
+    GameObject drawing;
+
+    public GameObject drawing3Fingers;
+    public GameObject drawing5Fingers;
 
     private static IAsk currentAsk;
 
@@ -131,7 +137,27 @@ public class DialogueHandler : MonoBehaviour
         {
             audiosource.PlayOneShot(zeeebSnippet);
         });
-        
+
+        dialogueEventDispatcher.AddDynamicEventListener("zeeeb_set_3_finger", args =>
+        {
+            drawing = drawing3Fingers;
+        });
+
+        dialogueEventDispatcher.AddDynamicEventListener("zeeeb_set_5_finger", args =>
+        {
+            drawing = drawing5Fingers;
+        });
+
+        dialogueEventDispatcher.AddDynamicEventListener("zeeeb_show_drawing", args =>
+        {
+            drawing.SetActive(true);
+        });
+
+        dialogueEventDispatcher.AddDynamicEventListener("zeeeb_hide_drawing", args =>
+        {
+            drawing.SetActive(false);
+        });
+
         dialogueEventDispatcher.AskCallback.AddListener((dialogue1, ask) =>
         {
             currentAsk = ask;
