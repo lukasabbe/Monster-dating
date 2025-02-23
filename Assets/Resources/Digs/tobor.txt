@@ -92,6 +92,10 @@ _end;
 
 _label; continue_small
 _event;change_rep;float|0,1
+
+Let's eat
+_event; food_comment
+
 Do you like my small shape?
 I love making robots and this is my big project
 _ask; robot_love|I also love to make robots!!!; cool_dude| Wow, that is so cool that you are in this thing; scam_dude|You have scammed me, you don't look at all as your minter profiler!!! 
@@ -105,12 +109,14 @@ I really like you.
 You are a cool dude. 
 Let's go and build a robot together
 _event; end_rep
+_end
 
 _label; cool_dude
 _event;change_rep;float|0,4
 Thank you, I don't like to be this small so that's why I hide in this suit
 You are cool for accepting me 
 _event; end_rep
+_end
 
 _label; scam_dude
 _event;change_rep;float|-0,9

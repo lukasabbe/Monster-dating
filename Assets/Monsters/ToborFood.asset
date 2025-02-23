@@ -15,6 +15,6 @@ MonoBehaviour:
   type: 2
   cooked: 1
   ovened: 0
-  burned: 1
+  burned: 0
   mixed: 0
   shopped: 0
