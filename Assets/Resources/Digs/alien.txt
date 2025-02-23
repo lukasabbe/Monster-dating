@@ -1,4 +1,4 @@
-Dowloading pack "How to interact with humans" by Glorpus...
+Dowloading pack "Basic human interaction Vol.1" by Glorpus...
 *Beep*
 Greetings human, how are you?
 
@@ -11,12 +11,21 @@ Dowloading pack "Understanding human feeling Vol.2" by Glorpus...
 It seems my galactic service provider is experiencing issues
 *Beep*
 It is downloaded
-I dont understand
 _event;change_rep;float;-0,1
+...
+I dont understand
+And I dont care
+_jump to;after_greeting
 
 _label;greeting_is_ok
-I dont care
+_event;change_rep;float;0.1
+Ok
+But it is expected that you find my company joyous
+_jump to;after_greeting
+
+_label;after_greeting
 Did you cook the human food as I requested?
+I am starving
 
 _ask;cooked_did_my_best|I did my best!;cooked_youre_gonna_love_it|You're gonna LOVE IT!;cooked_no|No
 
@@ -27,14 +36,179 @@ _event;change_rep;float|0.2
 _jump to;eat
 
 _label;cooked_youre_gonna_love_it
+...
+Stop putting thoughts in my head!
 Your attempt at mind control is weak
 You are weak
 _event;change_rep;float|-0.1
 _jump to;eat
 
 _label;eat
-Let us feast
+Let us consume
 Mmmh, nutrition
 Delicious
-Im posting this on Zorpbook
-#HowDidTheyMakeItTo2025
+Im posting this on Zlorpbook
+How do you spend your limited time on this planet?
+_ask; hobby_read|I read;hobby_musician|I'm a musician;hobby_painter|I'm a painter;hobby_nothing|I just relax
+
+
+
+_label;hobby_read
+Have you read "Two rocks on a doormat"?
+It is most joyous
+_ask;has_read_troad|Yes;has_not_read_troad|No;troad_that_sounds_made_up|Sounds like you made that up
+
+_label;has_read_troad
+I made it up
+This has been disappointing
+Dowloading pack "How to be cool" by Zeeeb...
+*Boop*
+So long, nerd!
+_end
+
+_label;has_not_read_troad
+_event;change_rep;float|0.1
+I made it up
+You should've known
+That was obvious even to a human child
+_jump to;after_hobbies
+
+_label;troad_that_sounds_made_up
+_event;change_rep;float|0.2
+Correct
+*Takes notes*
+You almost qualify as an intelligent lifeform
+You rank just below...
+Plants
+We moved you down after you invented war
+And left handedness
+Dont look so suprised
+_jump to;after_hobbies
+
+
+
+_label;hobby_musician
+I played in a band in my youth
+Do you want to hear a snippet?
+_ask;want_to_hear_zeeeb_snippet|Absolutely!;dont_want_to_hear_zeeeb_snippet|Id rather not
+
+_label;want_to_hear_zeeeb_snippet
+_event;zeeeb_play_snippet
+*Almost cracks a smile*
+_event;change_rep;float|0.05
+What do you think?
+_ask;zeeeb_snippet_good|I like it;zeeeb_snippet_ok|It needs some work;zeeeb_snippet_bad|Was that even music?
+
+_label;dont_want_to_hear_zeeeb_snippet
+_event;change_rep;float|-0.8
+Humans can be cruel
+It would have brought me joy
+...
+It is okay, I have more important matters at hand
+_jump to;after_hobbies
+
+_label;zeeeb_snippet_good
+_event;change_rep;float|0.1
+It is not complete
+It still needs some work
+_jump to;after_hobbies
+
+_label;zeeeb_snippet_ok
+_event;change_rep;float|0.15
+I agree
+Maybe you can join my galactic jam band?
+_ask;join_gjb|I would love to!;dont_join_gjb|No, but thanks for the offer
+
+_label;join_gjb
+You will join us in sector 734-öber/b at 12:00 tomorrow
+It is right across the street from the non-euclidean furniture store, you cant miss it
+
+_ask;i_cant_get_to_sector|I cant get to sector 734-öber/b
+
+_label;dont_join_gjb
+_label;i_cant_get_to_sector
+Disappointing
+I was getting ready to jam
+_jump to;after_gjb
+
+_label;after_gjb
+
+_jump to;after_hobbies
+
+_label;zeeeb_snippet_bad
+I cannot fix bad taste
+It seems humans are of no use to the Galactic Council
+Deleting pack "Basic human interaction Vol.1" by Glorpus...
+*Beep*
+Zöb zubi zeböö plöört!!!
+_end
+
+
+_label;hobby_painter
+We abducted one of your greatest painters
+Leonardo Da Vinci I think his name is
+
+_ask;davinci_didnt_die|He didnt die?;who_else_have_you_abducted|Who else have you abducted?
+
+_label;davinci_didnt_die
+I did not say that
+He fell apart during the abduction process
+The particle beam was not calibrated, we must've forgot
+We had not perfected it yet
+_jump to;what_do_you_paint
+
+_label;who_else_have_you_abducted
+I cant say
+I dont work there anymore
+_jump to;what_do_you_paint
+
+_label;what_do_you_paint
+That is unimportant
+What do you paint?
+_ask;paint_landscapes|Landscapes;paint_portraits|Portraits
+
+_label;paint_landscapes
+Yes, earth is very pretty
+*takes notes*
+That could be of use to us
+_jump to; after_hobbies
+
+_label;paint_portraits
+Impressive
+You have to stare at alot of humans
+That sounds unbearable
+...
+Maybe you could paint a portrait of me for my album?
+I think im gonna get my band together again
+_ask;paint_portrait_for_band|Yeah I could do that;dont_paint_portrait_for_band|No I cant sorry;paint_portrait_let_me_hear_a_snippet|Let me hear a snippet before I decide
+
+_label;paint_portrait_for_band
+_event;change_rep;float|0.05
+This will help album sales
+That is good
+_jump to; after_paint_portrait
+
+_label;dont_paint_portrait_for_band
+Maybe it isnt the right time to start playing again
+...
+_jump to; after_paint_portrait
+
+_label;paint_portrait_let_me_hear_a_snippet
+_event;zeeeb_play_snippet
+*he is bobbing his head up and down*
+So will you paint the portrait?
+_ask;paint_portrait_for_band|Yes, I like your style;dont_paint_portrait_for_band|No
+
+_label; after_paint_portrait
+
+_jump to;after_hobbies
+
+_label;hobby_nothing
+*taking notes*
+
+_jump to;after_hobbies
+
+_label;after_hobbies
+I have tolerated your company
+But I have to leave
+_event;end_rep

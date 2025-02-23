@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class DialogueHandler : MonoBehaviour
 {
+    public AudioSource audiosource;
+
     public List<Button> buttons = new();
     public GameObject next_button;
     
@@ -28,10 +30,14 @@ public class DialogueHandler : MonoBehaviour
     private int shirtIndex = 1;
     
     public List<GameObject> martin_faces = new List<GameObject>();
-    
+
+    //Zeeb stuff
+    public AudioClip zeeebSnippet;
+
     private static IAsk currentAsk;
 
     private float rep;
+
     
     private void Start()
     {
@@ -120,7 +126,11 @@ public class DialogueHandler : MonoBehaviour
                 dialogueText.text = monsterDialogue[currentMonster].end_comments[1];
             }
         });
-        
+
+        dialogueEventDispatcher.AddDynamicEventListener("zeeeb_play_snippet", args =>
+        {
+            audiosource.PlayOneShot(zeeebSnippet);
+        });
         
         dialogueEventDispatcher.AskCallback.AddListener((dialogue1, ask) =>
         {

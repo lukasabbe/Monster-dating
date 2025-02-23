@@ -25,9 +25,9 @@ public class GamerManager : MonoBehaviour
     {
         return currentMonster switch
         {
-            0 => 4,
-            1 => 5,
-            2 => 6,
+            0 => 6,
+            1 => 7,
+            2 => 8,
             _ => 0
         };
     }
