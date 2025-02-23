@@ -1932,8 +1932,9 @@ MonoBehaviour:
   dialogueText: {fileID: 2407477190789139727}
   monsterDialogue:
   - {fileID: 11400000, guid: 77f37eeaa18a34b4aab47e8c2ea37fad, type: 2}
+  - {fileID: 11400000, guid: 08f419b8510885943b26b0586c9fc663, type: 2}
   - {fileID: 11400000, guid: 7260f85193e56e443882932bb51480f0, type: 2}
-  currentMonster: 1
+  currentMonster: 2
   foodItems: []
   shirts:
   - {fileID: 0}

@@ -18,7 +18,8 @@ public class ButtonGuiEventHandler : MonoBehaviour, IPointerEnterHandler, IPoint
 
     private void OnDisable()
     {
-        StartCoroutine(LerpColors(fg, bg));
+        bgImage.color = bg;
+        text.color = fg;
     }
 
     public void OnPointerDown(PointerEventData eventData)
