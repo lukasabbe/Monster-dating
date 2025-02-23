@@ -16,6 +16,11 @@ public class ButtonGuiEventHandler : MonoBehaviour, IPointerEnterHandler, IPoint
     public Color bg;
     public Color fg;
 
+    private void OnDisable()
+    {
+        StartCoroutine(LerpColors(fg, bg));
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         audioSource.pitch = Random.Range(0.9f, 1.1f);
