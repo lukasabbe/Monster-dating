@@ -1514,14 +1514,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7260f85193e56e443882932bb51480f0, type: 2}
   currentMonster: 1
   foodItems: []
+  martinAnimator: {fileID: 0}
   shirts:
   - {fileID: 1400507628}
   - {fileID: 1800726611}
   - {fileID: 344134085}
   martin_faces:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1400507628}
+  - {fileID: 1800726611}
+  - {fileID: 344134085}
   zeeebSnippet: {fileID: 8300000, guid: 6755c522f1f9e0f4c85ab723828e60ce, type: 3}
   drawing3Fingers: {fileID: 0}
   drawing5Fingers: {fileID: 0}
