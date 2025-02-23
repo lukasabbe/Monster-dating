@@ -580,15 +580,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Zeeeb is very new to earth doesnt fully understand humans.
+  m_text: 'Zeeeb played in a band in his youth, he has thought about bringing the
+    band togheter again
 
 
-    Zeeeb
-    has no concept of human interactions, try to be honest!
+    Zeeeb has no concept of human interactions, try to
+    be honest!
 
 
-    Zeeeb also has
-    no concept of human food, I dont really matters what you cook.'
+    Zeeeb also has no concept of human food, I dont really think
+    it matters what you cook.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: acb72966282268843be35807cd28e92b, type: 2}
   m_sharedMaterial: {fileID: 2358751732413702691, guid: acb72966282268843be35807cd28e92b, type: 2}
@@ -916,7 +917,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 366.8, y: 240}
+  m_SizeDelta: {x: 366.8, y: 259.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054553501
 MonoBehaviour:
