@@ -1494,7 +1494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.08235294, g: 0.023529412, b: 0.34901962, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1550,6 +1550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 847219674}
   fadeInOnSceneLoad: 1
+  completedDatesHearts: []
 --- !u!4 &863264203
 Transform:
   m_ObjectHideFlags: 0
