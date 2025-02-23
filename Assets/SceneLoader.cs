@@ -63,13 +63,15 @@ public class SceneLoader : MonoBehaviour
         {
             image.gameObject.SetActive(true);
 
-            for (float t = 1.0f; t > 0.0f; t -= Time.deltaTime)
+            for (float t = 1.0f; t > 0.0f; t -= Time.deltaTime * 2.0f)
             {
                 var color = image.color;
                 color.a = t;
                 image.color = color;
                 yield return null;
             }
+
+            yield return new WaitForSeconds(0.1f);
 
             image.gameObject.SetActive(false);
         }
@@ -82,13 +84,15 @@ public class SceneLoader : MonoBehaviour
         {
             image.gameObject.SetActive(true);
 
-            for (float t = 0.0f; t < 1.0f; t += Time.deltaTime)
+            for (float t = 0.0f; t < 1.0f; t += Time.deltaTime * 2.0f)
             {
                 var color = image.color;
                 color.a = t;
                 image.color = color;
                 yield return null;
             }
+
+            yield return new WaitForSeconds(0.1f);
         }
     }
 

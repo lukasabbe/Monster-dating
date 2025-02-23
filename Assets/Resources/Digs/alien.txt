@@ -5,7 +5,7 @@ Greetings human, how are you?
 _ask; greeting_is_ok|Im ok; greeting_is_not_ok|I've been feeling a bit down lately
 
 _label;greeting_is_not_ok
-Dowloading pack "Understanding human feeling Vol.2" by Glorpus...
+Dowloading pack "Understanding human feelings Vol.2" by Glorpus...
 *Beep*
 *Boop*
 It seems my galactic service provider is experiencing issues
@@ -141,12 +141,13 @@ It seems humans are of no use to the Galactic Council
 Deleting pack "Basic human interaction Vol.1" by Glorpus...
 *Beep*
 Zöb zubi zeböö plöört!!!
+*Zeeeb seems pissed*
 _end
 
 
 _label;hobby_painter
 We abducted one of your greatest painters
-Leonardo Da Vinci I think his name is
+Da Vinci I think his name was
 
 _ask;davinci_didnt_die|He didnt die?;who_else_have_you_abducted|Who else have you abducted?
 
@@ -160,6 +161,7 @@ _jump to;what_do_you_paint
 _label;who_else_have_you_abducted
 I cant say
 I dont work there anymore
+Probably some other famous artists
 _jump to;what_do_you_paint
 
 _label;what_do_you_paint
@@ -196,6 +198,7 @@ _jump to; after_paint_portrait
 _label;paint_portrait_let_me_hear_a_snippet
 _event;zeeeb_play_snippet
 *he is bobbing his head up and down*
+_event;change_rep;float|0.05
 So will you paint the portrait?
 _ask;paint_portrait_for_band|Yes, I like your style;dont_paint_portrait_for_band|No
 
@@ -209,7 +212,49 @@ _label;hobby_nothing
 _jump to;after_hobbies
 
 _label;after_hobbies
-I have tolerated your company
-But I have to leave
+Ok, now time for some questions
+
+_label;before_five_fingers
+
+Do you find that 5 fingers are a good amount for each hand?
+_ask;five_fingers_good|Yes?;five_fingers_bad|No?;five_fingers_what|What?
+
+_label;five_fingers_good
+_event;zeeeb_set_5_finger
+*takes notes*
+_jump to;zeeeb_scribble
+
+_label;five_fingers_bad
+_event;zeeeb_set_3_finger
+*takes notes*
+_jump to;zeeeb_scribble
+
+_label;zeeeb_scribble
+_event;change_rep;float|0.1
+*he seems to be drawing something*
+Good, good
+_jump to;after_five_fingers
+
+_label;five_fingers_what
+_event;change_rep;float|-0.05
+You need to answer the question
+_jump to;before_five_fingers
+
+_label;after_five_fingers
+_ask;ask_to_see_drawing|Can I see what you are drawing;ignore_drawing|*do nothing*
+
+_label;ask_to_see_drawing
+_event;zeeeb_show_drawing
+I have not gotten alot of practice
+*he seems very proud*
+_jump to;after_see_drawing
+
+_label;ignore_drawing
+_event;zeeeb_hide_drawing
+*he continues to scribble*
+_jump to;after_see_drawing
+
+_label;after_see_drawing
+I have all the data I need
+You were...
 _event;end_rep
-..skip_line..

@@ -236,7 +236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 959010882}
+  m_Father: {fileID: 669968244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &344134087
 SpriteRenderer:
@@ -601,6 +601,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &669968243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669968244}
+  - component: {fileID: 669968245}
+  m_Layer: 0
+  m_Name: Ankare
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &669968244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669968243}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1400507629}
+  - {fileID: 1800726612}
+  - {fileID: 344134086}
+  m_Father: {fileID: 959010882}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669968245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669968243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3452c527aaf9d77439cc69c83c936748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.01
+  frequency: 0.75
 --- !u!1 &959010881
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 959010882}
   m_Layer: 0
-  m_Name: MartinThings
+  m_Name: Tobor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -630,9 +679,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1400507629}
-  - {fileID: 1800726612}
-  - {fileID: 344134086}
+  - {fileID: 669968244}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1218141644
@@ -744,7 +791,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 959010882}
+  m_Father: {fileID: 669968244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1400507630
 SpriteRenderer:
@@ -918,7 +965,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 959010882}
+  m_Father: {fileID: 669968244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1800726613
 SpriteRenderer:
@@ -1029,9 +1076,7 @@ MonoBehaviour:
   dialogueText: {fileID: 2407477190789139727}
   monsterDialogue:
   - {fileID: 11400000, guid: 77f37eeaa18a34b4aab47e8c2ea37fad, type: 2}
-  - {fileID: 11400000, guid: 08f419b8510885943b26b0586c9fc663, type: 2}
-  - {fileID: 11400000, guid: 7260f85193e56e443882932bb51480f0, type: 2}
-  currentMonster: 1
+  currentMonster: 0
   foodItems: []
   shirts:
   - {fileID: 0}
@@ -1042,6 +1087,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   zeeebSnippet: {fileID: 0}
+  drawing3Fingers: {fileID: 0}
+  drawing5Fingers: {fileID: 0}
 --- !u!1 &1949767104
 GameObject:
   m_ObjectHideFlags: 0
