@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ToborFood
   m_EditorClassIdentifier: 
   type: 2
-  cooked: 0
+  cooked: 1
   ovened: 0
-  burned: 0
+  burned: 1
   mixed: 0
   shopped: 0

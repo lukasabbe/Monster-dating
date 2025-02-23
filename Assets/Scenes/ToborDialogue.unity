@@ -1019,6 +1019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75df2d48671c0fb418270a8b2940797f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audiosource: {fileID: 0}
   buttons:
   - {fileID: 5308033756698207666}
   - {fileID: 4754359573968735118}
@@ -1028,7 +1029,9 @@ MonoBehaviour:
   dialogueText: {fileID: 2407477190789139727}
   monsterDialogue:
   - {fileID: 11400000, guid: 77f37eeaa18a34b4aab47e8c2ea37fad, type: 2}
-  currentMonster: 0
+  - {fileID: 11400000, guid: 08f419b8510885943b26b0586c9fc663, type: 2}
+  - {fileID: 11400000, guid: 7260f85193e56e443882932bb51480f0, type: 2}
+  currentMonster: 1
   foodItems: []
   shirts:
   - {fileID: 0}
@@ -1038,6 +1041,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  zeeebSnippet: {fileID: 0}
 --- !u!1 &1949767104
 GameObject:
   m_ObjectHideFlags: 0
