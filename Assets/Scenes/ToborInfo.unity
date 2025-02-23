@@ -580,12 +580,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tobar is a big dude but not a big appetite to normal food. The food needs
-    to be made out of metal!
+  m_text: 'Tobar is a big dude but does not have a big appetite for normal food.
+    He prefers metal.
 
 
-    But metal that is not *hot* is not usefull. VERY
-    HOT
+    But metal that is not *hot* is not useful.
+
+
+    Tobar
+    seems to be hiding something...
 
 '
   m_isRightToLeft: 0
@@ -915,7 +918,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 366.8, y: 240}
+  m_SizeDelta: {x: 366.8, y: 215.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054553501
 MonoBehaviour:

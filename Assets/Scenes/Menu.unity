@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1788155071}
-  fadeInOnSceneLoad: 0
+  fadeInOnSceneLoad: 1
   completedDatesHearts: []
 --- !u!4 &1280972823
 Transform:
