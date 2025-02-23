@@ -3,43 +3,49 @@ I am Tobor
 _ask; pen_big|Wow you are big!;neu_big|Hello, I don't think I made enough food for us;pos_big|Wow you look cool
 
 _label; pen_big
+_event;change_rep;float|-0,1
 I am NOT big!
 I am a normal size.
 _ask; pen_big2|No you are not!;pos_big2|Okay, you are not big
 
 _label; pen_big2
-
+_event;change_rep;float|-0,2
 _label;pen_big3
 I AM VERY SMALL
-_event; change_clothes
+_event; change_face
 SEE I am tiny
 HAHA, you are so wrong!
 _jump to; continue_small
 
 _label; pos_big2
+_event;change_rep;float|0,3
 Haha, I am not haha.
 But are you sure about that?
 _ask; pen_big3|No you are big!;continue_not_small|No, I have changed my mind. You are small
  
 _label; neu_big
-What, I don't need foo...
+_event;change_rep;float|0,1
+What, I don't need food...
 I don't take big portions, 
 so it should be fine if you have made the right type of food
 _ask; pen_scars|How did you get the scars on you head?!;continue_not_small|Okay, let's eat!
 
 _label; pen_scars
+_event;change_rep;float|-0,3
 The scares, what are you talking about?
 I don't have scars!!
 _ask; pen_scars2|What are they then?!;continue_not_small|Okay, let's eat then!
 
 _label; pen_scars2
+_event;change_rep;float|0,1
 They are this!
-_event; change_clothes
+_event; change_face
 I am me hahaha!
 
 _jump to; continue_small
 
 _label; pos_big
+_event;change_rep;float|-0,2
 Wow, you try too hard at this.
 I know I am cool HAHHA.
 What do you think is cool about me??
@@ -50,16 +56,17 @@ Oh, lol. Okay, my nose is something!
 _jump to; continue_small
 
 _label; continue_not_small
+_event;change_rep;float|-0,3
 What have you brought for me to use... I mean eat.
 Let's try this
 _event; food_comment
 Okay, now after that. What do you do for fun human? 
-_ask q_1|I like to work on robots; q_2|I like to date monsters; q_3|I like to cook food
+_ask; q_1|I like to work on robots; q_2|I like to date monsters; q_3|I like to cook food
 
 _label; q_1
+_event;change_rep;float|0,5
 OMG THAT WHAT I LIKE TO DO!!!!
-_event; change_clothes
-_event; change_clothes
+_event; change_face
 This is the real me HAHA
 This is my SUPER nice robot
 HAhaha do you understand my name now
@@ -72,6 +79,7 @@ Oh that's a unique hobby
 But very boooooring!
 I am leaving
 You have not even seen the true me, but you don't deserve it
+..skip..
 _end;
 
 _label; q_3
@@ -79,8 +87,33 @@ I don't like food, I just wanted the bolt HAHaha
 What a booooooring thing to spend time on
 I am leaving
 You have not even seen the true me, but you don't deserve it
+..skip..
 _end;
 
 _label; continue_small
+_event;change_rep;float|0,1
 Do you like my small shape?
 I love making robots and this is my big project
+_ask; robot_love|I also love to make robots!!!; cool_dude| Wow, that is so cool that you are in this thing; scam_dude|You have scammed me, you don't look at all as your minter profiler!!! 
+
+_label; robot_love
+_event;change_rep;float|0,9
+OMG, you too??
+That is so nice.
+_event; change_face
+I really like you.
+You are a cool dude. 
+Let's go and build a robot together
+_event; end_rep
+
+_label; cool_dude
+_event;change_rep;float|0,4
+Thank you, I don't like to be this small so that's why I hide in this suit
+You are cool for accepting me 
+_event; end_rep
+
+_label; scam_dude
+_event;change_rep;float|-0,9
+AAAAAA, this is what I feared.
+No one like small people no a days
+_event; end_rep

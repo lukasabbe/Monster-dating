@@ -18,13 +18,12 @@ MonoBehaviour:
   req_food_items:
   - {fileID: 11400000, guid: 8341acdf3e98de44daecc4bfdd75ac6e, type: 2}
   food_comments:
-  - 
-  - 
-  - 
+  - HAHA, i can use this. I mean eat this. VERY GOOD
+  - THIS IS NOT WHAT I NEED. IS UNSABLE. AAAA. I NEED A HOT BOLT THAT IS SUPER HOT
   end_succes_values:
   - 1.5
   - 0.5
   end_comments:
-  - 
-  - 
-  - 
+  - ' You are so cool, let''s hang out so much we can'
+  - This date, was... disappointing
+  - You are just the worst AAAAAA. I will never want to meet again
