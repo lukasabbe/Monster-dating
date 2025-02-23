@@ -135,6 +135,7 @@ public class DialogueHandler : MonoBehaviour
 
         dialogueEventDispatcher.AddDynamicEventListener("end_rep", args =>
         {
+            Debug.Log(rep);
             if (rep >= monsterDialogue[currentMonster].end_succes_values[0])
             {
                 dialogueText.text = monsterDialogue[currentMonster].end_comments[0];

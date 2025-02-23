@@ -18,7 +18,7 @@ And I dont care
 _jump to;after_greeting
 
 _label;greeting_is_ok
-_event;change_rep;float|0.1
+_event;change_rep;float|0,1
 Ok
 But it is expected that you find my company joyous
 _jump to;after_greeting

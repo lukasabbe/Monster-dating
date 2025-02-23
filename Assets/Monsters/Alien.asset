@@ -18,7 +18,7 @@ MonoBehaviour:
   req_food_items: []
   food_comments: []
   end_succes_values:
-  - 1.7
+  - 1.6
   - 1
   end_comments:
   - Intelligent, maybe humans arent so bad after all
