@@ -56,4 +56,12 @@ public class GamerManager : MonoBehaviour
         buffer.Read(out bool temp3);
         completedMonsters[2] = temp3;
     }
+
+    public void removeData()
+    {
+        var save_path = Application.persistentDataPath + "/monsters_dating.dat";
+        if(!File.Exists(save_path)) return;
+        File.Delete(save_path);
+        for (var i = 0; i < 3; i++) completedMonsters[i] = false;
+    }
 }

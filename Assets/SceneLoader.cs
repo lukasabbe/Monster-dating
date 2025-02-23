@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +11,8 @@ public class SceneLoader : MonoBehaviour
 
     public bool fadeInOnSceneLoad = true;
 
+    public List<GameObject> completedDatesHearts = new();
+
     private void Start()
     {
         if (fadeInOnSceneLoad)
@@ -19,6 +22,11 @@ public class SceneLoader : MonoBehaviour
         else
         {
             image.gameObject.SetActive(false);
+        }
+
+        for (var i = 0; i < completedDatesHearts.Count; i++)
+        {
+            if(GamerManager.completedMonsters[i]) completedDatesHearts[i].gameObject.SetActive(true);
         }
     }
 
