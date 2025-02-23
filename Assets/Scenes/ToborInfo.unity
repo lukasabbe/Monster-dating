@@ -300,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1692469075}
   fadeInOnSceneLoad: 1
+  completedDatesHearts: []
 --- !u!4 &146354980
 Transform:
   m_ObjectHideFlags: 0
@@ -579,7 +580,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Tobar is a big dude but not a big appetite to normal food. The food needs
+    to be made out of metal!
+
+
+    But metal that is not *hot* is not usefull. VERY
+    HOT
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: acb72966282268843be35807cd28e92b, type: 2}
   m_sharedMaterial: {fileID: 2358751732413702691, guid: acb72966282268843be35807cd28e92b, type: 2}

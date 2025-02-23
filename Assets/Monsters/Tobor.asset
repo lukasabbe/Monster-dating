@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tobor
   m_EditorClassIdentifier: 
   file_name: Digs/tobor
-  monster_name: toboR
+  monster_name: tobor
   base_rep: 0.5
   req_food_items:
   - {fileID: 11400000, guid: 8341acdf3e98de44daecc4bfdd75ac6e, type: 2}
