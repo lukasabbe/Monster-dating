@@ -65,6 +65,7 @@ Dowloading pack "How to be cool" by Zeeeb...
 *Boop*
 So long, nerd!
 _end
+SEEYA!
 
 _label;has_not_read_troad
 _event;change_rep;float|-0,5
