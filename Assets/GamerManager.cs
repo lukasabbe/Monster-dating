@@ -46,6 +46,7 @@ public class GamerManager : MonoBehaviour
     public static void LoadGame()
     {
         var save_path = Application.persistentDataPath + "/monsters_dating.dat";
+        if(!File.Exists(save_path)) return;  
         var bytes = File.ReadAllBytes(save_path);
         var buffer = new Buffer(bytes);
         buffer.Read(out bool temp1);
