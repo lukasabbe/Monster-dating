@@ -1,0 +1,55 @@
+﻿Hello
+I am Tobor
+_ask; pen_big|Wow you are big!;neu_big|Hello, I don't think I made enough food for us;pos_big|Wow you look cool
+
+_label; pen_big
+I am NOT big!
+I am a normal size.
+_ask; pen_big2|No you are not!;pos_big2|Okay, you are not big
+
+_label; pen_big2
+
+_label;pen_big3
+I AM VERY SMALL
+_event; change_clothes
+SEE I am tiny
+HAHA, you are so wrong!
+_jump to; continue_small
+
+_label; pos_big2
+Haha, I am not haha.
+But are you sure about that?
+_ask; pen_big3|No you are big!;continue_not_small|No, I have changed my mind. You are small
+ 
+_label; neu_big
+What, I don't need foo...
+I don't take big portions, 
+so it should be fine if you have made the right type of food
+_ask; pen_scars|How did you get the scars on you head?!;continue_not_small|Okay, let's eat!
+
+_label; pen_scars
+The scares, what are you talking about?
+I don't have scars!!
+_ask; pen_scars|What are they then?!;continue_not_small|Okay, let's eat then!
+
+_label; pen_scars
+They are this!
+_event; change_clothes
+I am me hahaha!
+
+_jump to; continue_small
+
+_label; pos_big
+Wow, you try too hard at this.
+I know I am cool HAHHA.
+What do you think is cool about me??
+_ask; pen_big|You are very big;nose|I think your nose is cool; pen_scars|The scars fits you!
+
+_label; nose
+Oh, lol. Okay, my nose is something!
+_jump to; continue_small
+
+_label; continue_not_small
+
+
+_label; continue_small
