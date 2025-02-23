@@ -347,6 +347,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7260f85193e56e443882932bb51480f0, type: 2}
   currentMonster: 0
   foodItems: []
+  martinAnimator: {fileID: 959010883}
   shirts:
   - {fileID: 15947845}
   - {fileID: 1704892246}
@@ -1348,10 +1349,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 959010882}
+  - component: {fileID: 959010883}
   m_Layer: 0
   m_Name: MartinThings
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1374,6 +1376,19 @@ Transform:
   - {fileID: 601326005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &959010883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959010881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa63f6964120364a9247eaeca238db8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  underTable: {x: 0, y: -2.8}
 --- !u!1 &1151059239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,7 +1996,7 @@ Transform:
   m_GameObject: {fileID: 1409534285}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.5000002, z: 0}
+  m_LocalPosition: {x: 0, y: -3.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

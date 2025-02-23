@@ -11,8 +11,8 @@ Dowloading pack "Understanding human feelings Vol.2" by Glorpus...
 It seems my galactic service provider is experiencing issues
 *Beep*
 It is downloaded
-_event;change_rep;float;-0,1
 ...
+_event;change_rep;float;-0,1
 I dont understand
 And I dont care
 _jump to;after_greeting
@@ -40,14 +40,14 @@ _label;cooked_youre_gonna_love_it
 Stop putting thoughts in my head!
 Your attempt at mind control is weak
 You are weak
-_event;change_rep;float|-0,1
+_event;change_rep;float|-0,3
 _jump to;eat
 
 _label;eat
 Let us consume
 Mmmh, nutrition
 Delicious
-Im posting this on Zlorpbook
+Im posting this on Zorpbook
 How do you spend your limited time on this planet?
 _ask; hobby_read|I read;hobby_musician|I'm a musician;hobby_painter|I'm a painter;hobby_nothing|I just relax
 
@@ -67,7 +67,7 @@ So long, nerd!
 _end
 
 _label;has_not_read_troad
-_event;change_rep;float|0,1
+_event;change_rep;float|-0,5
 I made it up
 You should've known
 That was obvious even to a human child
@@ -79,9 +79,10 @@ Correct
 *Takes notes*
 You almost qualify as an intelligent lifeform
 You rank just below...
-Plants
+Worms
 We moved you down after you invented war
 And left handedness
+...
 Dont look so suprised
 _jump to;after_hobbies
 
@@ -94,7 +95,7 @@ _ask;want_to_hear_zeeeb_snippet|Absolutely!;dont_want_to_hear_zeeeb_snippet|Id r
 
 _label;want_to_hear_zeeeb_snippet
 _event;zeeeb_play_snippet
-*Almost cracks a smile*
+*zeeeb almost cracks a smile*
 _event;change_rep;float|0,05
 What do you think?
 _ask;zeeeb_snippet_good|I like it;zeeeb_snippet_ok|It needs some work;zeeeb_snippet_bad|Was that even music?
@@ -108,13 +109,13 @@ It is okay, I have more important matters at hand
 _jump to;after_hobbies
 
 _label;zeeeb_snippet_good
-_event;change_rep;float|0,1
+_event;change_rep;float|0,05
 It is not complete
 It still needs some work
 _jump to;after_hobbies
 
 _label;zeeeb_snippet_ok
-_event;change_rep;float|0,15
+_event;change_rep;float|0,2
 I agree
 Maybe you can join my galactic jam band?
 _ask;join_gjb|I would love to!;dont_join_gjb|No, but thanks for the offer
@@ -162,6 +163,7 @@ _label;who_else_have_you_abducted
 I cant say
 I dont work there anymore
 Probably some other famous artists
+Probably one of those you humans have all those theories about
 _jump to;what_do_you_paint
 
 _label;what_do_you_paint
@@ -170,12 +172,14 @@ What do you paint?
 _ask;paint_landscapes|Landscapes;paint_portraits|Portraits
 
 _label;paint_landscapes
+_event;change_rep;float|0,05
 Yes, earth is very pretty
 *takes notes*
 That could be of use to us
 _jump to; after_hobbies
 
 _label;paint_portraits
+_event;change_rep;float|0,1
 Impressive
 You have to stare at alot of humans
 That sounds unbearable
@@ -185,12 +189,13 @@ I think im gonna get my band together again
 _ask;paint_portrait_for_band|Yeah I could do that;dont_paint_portrait_for_band|No I cant sorry;paint_portrait_let_me_hear_a_snippet|Let me hear a snippet before I decide
 
 _label;paint_portrait_for_band
-_event;change_rep;float|0,05
+_event;change_rep;float|0,1
 This will help album sales
 That is good
 _jump to; after_paint_portrait
 
 _label;dont_paint_portrait_for_band
+_event;change_rep;float|-0,1
 Maybe it isnt the right time to start playing again
 ...
 _jump to; after_paint_portrait
@@ -198,7 +203,7 @@ _jump to; after_paint_portrait
 _label;paint_portrait_let_me_hear_a_snippet
 _event;zeeeb_play_snippet
 *he is bobbing his head up and down*
-_event;change_rep;float|0,05
+_event;change_rep;float|0,1
 So will you paint the portrait?
 _ask;paint_portrait_for_band|Yes, I like your style;dont_paint_portrait_for_band|No
 
@@ -256,6 +261,6 @@ _jump to;after_see_drawing
 
 _label;after_see_drawing
 I have all the data I need
-You were...
+You are...
 _event;end_rep
 Goodbye...
