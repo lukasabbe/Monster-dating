@@ -12,7 +12,7 @@ _label; pen_big2
 _event;change_rep;float|-0,2
 _label;pen_big3
 I AM VERY SMALL
-_event; change_clothes
+_event; change_face
 SEE I am tiny
 HAHA, you are so wrong!
 _jump to; continue_small
@@ -39,7 +39,7 @@ _ask; pen_scars2|What are they then?!;continue_not_small|Okay, let's eat then!
 _label; pen_scars2
 _event;change_rep;float|0,1
 They are this!
-_event; change_clothes
+_event; change_face
 I am me hahaha!
 
 _jump to; continue_small
@@ -66,7 +66,7 @@ _ask; q_1|I like to work on robots; q_2|I like to date monsters; q_3|I like to c
 _label; q_1
 _event;change_rep;float|0,5
 OMG THAT WHAT I LIKE TO DO!!!!
-_event; change_clothes
+_event; change_face
 This is the real me HAHA
 This is my SUPER nice robot
 HAhaha do you understand my name now
@@ -79,6 +79,7 @@ Oh that's a unique hobby
 But very boooooring!
 I am leaving
 You have not even seen the true me, but you don't deserve it
+..skip..
 _end;
 
 _label; q_3
@@ -86,6 +87,7 @@ I don't like food, I just wanted the bolt HAHaha
 What a booooooring thing to spend time on
 I am leaving
 You have not even seen the true me, but you don't deserve it
+..skip..
 _end;
 
 _label; continue_small
@@ -98,7 +100,7 @@ _label; robot_love
 _event;change_rep;float|0,9
 OMG, you too??
 That is so nice.
-_event; change_clothes
+_event; change_face
 I really like you.
 You are a cool dude. 
 Let's go and build a robot together

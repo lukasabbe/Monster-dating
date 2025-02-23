@@ -1519,13 +1519,14 @@ MonoBehaviour:
   - {fileID: 1400507628}
   - {fileID: 1800726611}
   - {fileID: 344134085}
-  martin_faces:
-  - {fileID: 1400507628}
-  - {fileID: 1800726611}
-  - {fileID: 344134085}
+  martin_faces: []
   zeeebSnippet: {fileID: 8300000, guid: 6755c522f1f9e0f4c85ab723828e60ce, type: 3}
   drawing3Fingers: {fileID: 0}
   drawing5Fingers: {fileID: 0}
+  tobor_faces:
+  - {fileID: 1400507628}
+  - {fileID: 1800726611}
+  - {fileID: 344134085}
 --- !u!4 &1361314996
 Transform:
   m_ObjectHideFlags: 0

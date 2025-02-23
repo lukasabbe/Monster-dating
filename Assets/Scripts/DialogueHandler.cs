@@ -45,7 +45,9 @@ public class DialogueHandler : MonoBehaviour
     private static IAsk currentAsk;
 
     private float rep;
-
+    
+    public List<GameObject> tobor_faces = new();
+    private int tobar_index = 1;
     
     private void Start()
     {
@@ -86,6 +88,13 @@ public class DialogueHandler : MonoBehaviour
                 shirts[shirtIndex].SetActive(true);
                 shirtIndex++;
             });
+        });
+        
+        dialogueEventDispatcher.AddDynamicEventListener("change_face", args =>
+        {
+            tobor_faces.ForEach(s => s.SetActive(false));
+            tobor_faces[tobar_index].SetActive(true);
+            tobar_index++;
         });
         
         dialogueEventDispatcher.AddDynamicEventListener("food_comment", args =>
